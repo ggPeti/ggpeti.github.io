@@ -65,7 +65,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "fe461c4e60b7c7eaeb0f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "54c03381fc255df0ef4d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/
@@ -1809,10 +1809,10 @@
 	    return color;
 	  }
 
-	  var isDark = _chromaJs2.default.contrast(neg, '#000') < _chromaJs2.default.contrast(neg, '#fff');
-	  var isDull = (0, _chromaJs2.default)(neg).hsl()[1] < .5;
+	  var isDark = _chromaJs2.default.contrast(color, '#000') < _chromaJs2.default.contrast(color, '#fff');
+	  var isDull = (0, _chromaJs2.default)(color).hsl()[1] < .5;
 
-	  return (0, _chromaJs2.default)(neg).saturate(isDull ? multiplier * saturation : 0).desaturate(isDull ? 0 : multiplier * saturation).darken(isDark ? 0 : multiplier * lightness).brighten(isDark ? multiplier * lightness : 0).hex();
+	  return (0, _chromaJs2.default)(color).saturate(isDull ? multiplier * saturation : 0).desaturate(isDull ? 0 : multiplier * saturation).darken(isDark ? 0 : multiplier * lightness).brighten(isDark ? multiplier * lightness : 0).hex();
 	};
 
 	var resolveColor = function resolveColor(base) {
